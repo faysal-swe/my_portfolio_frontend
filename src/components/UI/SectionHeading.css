@@ -1,0 +1,5 @@
+/* SectionHeading specific styles if needed beyond index.css */
+.section-header {
+  position: relative;
+  z-index: 2;
+}
