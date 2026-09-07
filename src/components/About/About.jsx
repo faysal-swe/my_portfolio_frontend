@@ -11,7 +11,7 @@ export default function About() {
         <SectionHeading
           badge="About Me"
           title="Transforming Ideas Into Fluid Digital Products"
-          subtitle="A passionate full-stack engineer and designer dedicated to craft, speed, and meaningful user interactions."
+          subtitle="A passionate Flutter developer dedicated to craft, performance, and fluid user interactions."
         />
 
         <div className="about-grid">
@@ -26,7 +26,7 @@ export default function About() {
               <div className="avatar-glow-ring"></div>
               <div className="avatar-badge">
                 <Sparkles size={14} className="avatar-badge-icon" />
-                <span>Senior Engineer</span>
+                <span>Flutter Specialist</span>
               </div>
             </div>
 
@@ -46,10 +46,10 @@ export default function About() {
               </div>
 
               <div className="profile-social-pills">
-                <span className="tech-pill">TypeScript</span>
-                <span className="tech-pill">React</span>
-                <span className="tech-pill">Node.js</span>
-                <span className="tech-pill">Figma</span>
+                <span className="tech-pill">Flutter</span>
+                <span className="tech-pill">Dart</span>
+                <span className="tech-pill">BLoC</span>
+                <span className="tech-pill">Firebase</span>
               </div>
             </div>
           </div>

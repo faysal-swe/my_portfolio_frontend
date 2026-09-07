@@ -1,15 +1,12 @@
 export const personalInfo = {
   name: "Faysal Ahmed",
-  role: "Full-Stack Developer & UI/UX Designer",
+  role: "Flutter Developer",
   location: "Dhaka, Bangladesh / Remote Worldwide",
   availability: "Available for freelance & full-time roles",
-  experienceYears: "5+",
-  projectsCompleted: "50+",
-  clientSatisfaction: "99%",
-  bioShort: "Passionate engineer and designer dedicated to building fast, beautiful, and accessible web and mobile applications.",
+  bioShort: "Passionate Flutter developer dedicated to building fast, beautiful, and fluid mobile and cross-platform applications.",
   bioLong: [
-    "I'm a Full-Stack Software Engineer and UI/UX Designer with over 5 years of experience building modern web and mobile platforms. I bridge the gap between engineering precision and intuitive user design.",
-    "My focus is on creating high-performance architectures, pixel-perfect user interfaces, and scalable backend services. From concept to production deployment, I turn complex challenges into elegant, clean solutions."
+    "I'm a dedicated Flutter Developer with experience building cross-platform mobile apps for iOS and Android with Dart, clean architecture, and responsive UI.",
+    "My focus is on creating fluid animations, scalable state management (Getx, Provider, Riverpod), and seamless RESTful API and Firebase integrations."
   ],
   email: "faysal.dev@example.com",
   phone: "+880 1700-000000",
@@ -23,42 +20,52 @@ export const personalInfo = {
   resumeUrl: "#"
 };
 
-export const heroCodeSnippet = `// Faysal.config.js
-import { Developer, Designer } from '@faysal/core';
+export const heroCodeSnippet = `// faysal_developer.dart
+import 'package:flutter/material.dart';
 
-export default class FaysalAhmed extends Developer {
-  name     = 'Faysal Ahmed';
-  title    = 'Full-Stack Developer & UI/UX Specialist';
-  location = 'Available Globally (Remote)';
-  
-  stack = {
-    frontend: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'Vanilla CSS'],
-    backend:  ['Node.js', 'Express', 'PostgreSQL', 'GraphQL', 'Redis'],
-    design:   ['Figma', 'Design Systems', 'Micro-Interactions', 'Prototyping']
-  };
+class FaysalAhmed extends StatelessWidget {
+  final String name = 'Faysal Ahmed';
+  final String role = 'Flutter Developer';
+  final String status = 'Available for hire';
 
-  currentStatus = 'Building world-class digital experiences';
-  
-  execute() {
-    return this.createHighPerformanceApps({
-      cleanCode: true,
-      modernAesthetics: '100%',
-      deliverOnTime: true
-    });
+  final List<String> skills = const [
+    'Flutter', 'Dart', 'BLoC',
+    'Provider', 'Firebase', 'REST APIs'
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return const SuperCleanApp(
+      performance: '60 FPS',
+      pixelPerfect: true,
+      userDelight: true,
+    );
   }
 }`;
 
 export const skillCategories = [
   {
+    category: "Flutter & Mobile Development",
+    icon: "Smartphone",
+    skills: [
+      { name: "Flutter & Dart", level: 96 },
+      { name: "State Management (BLoC / Provider / Riverpod)", level: 94 },
+      { name: "REST APIs & JSON Integration", level: 92 },
+      { name: "Firebase (Auth, Firestore, Cloud Messaging)", level: 90 },
+      { name: "Clean Architecture & Design Patterns", level: 92 },
+      { name: "CI/CD & App Store / Play Store Release", level: 88 }
+    ]
+  },
+  {
     category: "Frontend Development",
     icon: "Layout",
     skills: [
-      { name: "React / Next.js", level: 95 },
-      { name: "JavaScript / TypeScript", level: 92 },
-      { name: "Modern CSS / CSS3 / Animations", level: 96 },
-      { name: "HTML5 / Semantic Web", level: 98 },
-      { name: "Redux / Zustand / React Query", level: 90 },
-      { name: "TailwindCSS & Styled Systems", level: 92 }
+      { name: "React / Next.js", level: 92 },
+      { name: "JavaScript / TypeScript", level: 90 },
+      { name: "Modern CSS / CSS3 / Animations", level: 94 },
+      { name: "HTML5 / Semantic Web", level: 96 },
+      { name: "Redux / Zustand / React Query", level: 88 },
+      { name: "TailwindCSS & Styled Systems", level: 90 }
     ]
   },
   {
@@ -77,12 +84,12 @@ export const skillCategories = [
     category: "Mobile & DevOps",
     icon: "Smartphone",
     skills: [
-      { name: "React Native / Expo", level: 86 },
+      { name: "Flutter / Android / iOS", level: 96 },
       { name: "Docker & Containerization", level: 78 },
       { name: "Git / GitHub Actions CI/CD", level: 90 },
       { name: "Vercel / AWS / Cloudflare", level: 84 },
-      { name: "Performance Profiling & SEO", level: 92 },
-      { name: "Testing (Jest / Vitest)", level: 82 }
+      { name: "Performance Profiling & Optimization", level: 92 },
+      { name: "Unit & Widget Testing", level: 85 }
     ]
   },
   {

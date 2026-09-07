@@ -41,6 +41,12 @@ export default function Skills() {
             All Disciplines
           </button>
           <button
+            className={`skill-tab-btn ${activeTab === 'flutter' ? 'active' : ''}`}
+            onClick={() => setActiveTab('flutter')}
+          >
+            Flutter
+          </button>
+          <button
             className={`skill-tab-btn ${activeTab === 'frontend' ? 'active' : ''}`}
             onClick={() => setActiveTab('frontend')}
           >

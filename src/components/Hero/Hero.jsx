@@ -66,24 +66,6 @@ export default function Hero() {
               <span>View Projects</span>
             </a>
           </div>
-
-          {/* Quick Stats Grid */}
-          <div className="hero-stats">
-            <div className="stat-item">
-              <div className="stat-value">{personalInfo.experienceYears}</div>
-              <div className="stat-label">Years of Experience</div>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <div className="stat-value">{personalInfo.projectsCompleted}</div>
-              <div className="stat-label">Completed Projects</div>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <div className="stat-value">{personalInfo.clientSatisfaction}</div>
-              <div className="stat-label">Client Satisfaction</div>
-            </div>
-          </div>
         </div>
 
         {/* Right Column: Interactive Code Terminal */}
@@ -98,7 +80,7 @@ export default function Hero() {
               </div>
               <div className="window-tab">
                 <Terminal size={14} className="tab-icon" />
-                <span>Faysal.config.js</span>
+                <span>faysal_developer.dart</span>
               </div>
               <button
                 className="copy-snippet-btn"
@@ -115,23 +97,22 @@ export default function Hero() {
               <pre className="code-pre">
                 <code>
                   <span className="token-comment">// Profile Configuration</span>{'\n'}
-                  <span className="token-keyword">import</span> {'{ '}
-                  <span className="token-variable">Developer</span>, <span className="token-variable">Designer</span>
-                  {' } '}
-                  <span className="token-keyword">from</span> <span className="token-string">'@faysal/core'</span>;{'\n\n'}
-                  <span className="token-keyword">export default class</span> <span className="token-class">FaysalAhmed</span> <span className="token-keyword">extends</span> <span className="token-variable">Developer</span> {'{\n'}
-                  {'  '}<span className="token-property">name</span>     = <span className="token-string">'Faysal Ahmed'</span>;{'\n'}
-                  {'  '}<span className="token-property">role</span>     = <span className="token-string">'Full-Stack & UI/UX'</span>;{'\n'}
-                  {'  '}<span className="token-property">status</span>   = <span className="token-string">'Available for hire'</span>;{'\n\n'}
-                  {'  '}<span className="token-property">skills</span>   = [{'\n'}
-                  {'    '}<span className="token-string">'React'</span>, <span className="token-string">'Next.js'</span>, <span className="token-string">'Node.js'</span>,{'\n'}
-                  {'    '}<span className="token-string">'TypeScript'</span>, <span className="token-string">'Figma'</span>, <span className="token-string">'PostgreSQL'</span>{'\n'}
+                  <span className="token-keyword">import</span> <span className="token-string">'package:flutter/material.dart'</span>;{'\n\n'}
+                  <span className="token-keyword">class</span> <span className="token-class">FaysalAhmed</span> <span className="token-keyword">extends</span> <span className="token-variable">StatelessWidget</span> {'{\n'}
+                  {'  '}<span className="token-keyword">final</span> <span className="token-keyword">String</span> <span className="token-property">name</span>   = <span className="token-string">'Faysal Ahmed'</span>;{'\n'}
+                  {'  '}<span className="token-keyword">final</span> <span className="token-keyword">String</span> <span className="token-property">role</span>   = <span className="token-string">'Flutter Developer'</span>;{'\n'}
+                  {'  '}<span className="token-keyword">final</span> <span className="token-keyword">String</span> <span className="token-property">status</span> = <span className="token-string">'Available for hire'</span>;{'\n\n'}
+                  {'  '}<span className="token-keyword">final</span> <span className="token-keyword">List</span>&lt;<span className="token-keyword">String</span>&gt; <span className="token-property">skills</span> = <span className="token-keyword">const</span> [{'\n'}
+                  {'    '}<span className="token-string">'Flutter'</span>, <span className="token-string">'Dart'</span>, <span className="token-string">'Riverpod'</span>,{'\n'}
+                  {'    '}<span className="token-string">'Provider'</span>, <span className="token-string">'Firebase'</span>, <span className="token-string">'REST APIs'</span>{'\n'}
                   {'  '}];{'\n\n'}
-                  {'  '}<span className="token-function">build</span>() {'{\n'}
-                  {'    '}<span className="token-keyword">return</span> <span className="token-keyword">new</span> <span className="token-class">SuperCleanApp</span>({'{'}{'\n'}
-                  {'      '}<span className="token-property">performance</span>: <span className="token-string">'100%'</span>,{'\n'}
-                  {'      '}<span className="token-property">userDelight</span>: <span className="token-boolean">true</span>{'\n'}
-                  {'    '}{'}'});{'\n'}
+                  {'  '}<span className="token-keyword">@override</span>{'\n'}
+                  {'  '}<span className="token-variable">Widget</span> <span className="token-function">build</span>(<span className="token-variable">BuildContext</span> context) {'{\n'}
+                  {'    '}<span className="token-keyword">return</span> <span className="token-keyword">const</span> <span className="token-class">SuperCleanApp</span>({'\n'}
+                  {'      '}<span className="token-property">performance</span>: <span className="token-string">'60 FPS'</span>,{'\n'}
+                  {'      '}<span className="token-property">pixelPerfect</span>: <span className="token-boolean">true</span>,{'\n'}
+                  {'      '}<span className="token-property">userDelight</span>: <span className="token-boolean">true</span>,{'\n'}
+                  {'    '});{'\n'}
                   {'  '}{'}\n'}
                   {'}'}
                 </code>
