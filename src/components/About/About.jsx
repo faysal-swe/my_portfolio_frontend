@@ -1,7 +1,8 @@
 import React from 'react';
-import { personalInfo, experiences } from '../../data/portfolioData';
+import { personalInfo, experiences, education } from '../../data/portfolioData';
 import SectionHeading from '../UI/SectionHeading';
 import { MapPin, Mail, Sparkles, Award, GraduationCap, Briefcase, Code, CheckCircle } from 'lucide-react';
+import faysalPhoto from '../../assets/faysal.jpg';
 import './About.css';
 
 export default function About() {
@@ -11,7 +12,7 @@ export default function About() {
         <SectionHeading
           badge="About Me"
           title="Transforming Ideas Into Fluid Digital Products"
-          subtitle="A passionate Flutter developer dedicated to craft, performance, and fluid user interactions."
+          subtitle="Dedicated Flutter developer crafting reliable, high-performance mobile apps for Android and iOS."
         />
 
         <div className="about-grid">
@@ -19,14 +20,14 @@ export default function About() {
           <div className="about-profile-card glass-card">
             <div className="avatar-frame">
               <img
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop"
+                src={faysalPhoto}
                 alt={personalInfo.name}
                 className="avatar-img"
               />
               <div className="avatar-glow-ring"></div>
               <div className="avatar-badge">
                 <Sparkles size={14} className="avatar-badge-icon" />
-                <span>Flutter Specialist</span>
+                <span>Flutter Developer</span>
               </div>
             </div>
 
@@ -48,7 +49,7 @@ export default function About() {
               <div className="profile-social-pills">
                 <span className="tech-pill">Flutter</span>
                 <span className="tech-pill">Dart</span>
-                <span className="tech-pill">BLoC</span>
+                <span className="tech-pill">Riverpod</span>
                 <span className="tech-pill">Firebase</span>
               </div>
             </div>
@@ -81,7 +82,7 @@ export default function About() {
                   </div>
                   <div>
                     <h4 className="pillar-title">Modern Aesthetics</h4>
-                    <p className="pillar-desc">Vibrant dark interfaces, responsive grids, and micro-interactions.</p>
+                    <p className="pillar-desc">Vibrant dark interfaces, responsive widgets, and fluid micro-interactions.</p>
                   </div>
                 </div>
 
@@ -90,8 +91,8 @@ export default function About() {
                     <Award size={20} />
                   </div>
                   <div>
-                    <h4 className="pillar-title">Ultra Performance</h4>
-                    <p className="pillar-desc">Sub-second loading times, optimized assets, and 95+ Core Web Vitals.</p>
+                    <h4 className="pillar-title">Smooth 60 FPS Performance</h4>
+                    <p className="pillar-desc">Reliable mobile builds, optimized widget trees, and sub-second load times.</p>
                   </div>
                 </div>
               </div>
@@ -101,7 +102,7 @@ export default function About() {
             <div className="experience-timeline glass-card">
               <h3 className="timeline-title">
                 <Briefcase size={20} className="timeline-heading-icon" />
-                <span>Experience Milestones</span>
+                <span>Work Experience</span>
               </h3>
 
               <div className="timeline-items">
@@ -118,6 +119,33 @@ export default function About() {
                       </div>
                       <span className="timeline-company">{exp.company}</span>
                       <p className="timeline-desc">{exp.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Education Timeline */}
+            <div className="experience-timeline glass-card">
+              <h3 className="timeline-title">
+                <GraduationCap size={20} className="timeline-heading-icon" />
+                <span>Education Background</span>
+              </h3>
+
+              <div className="timeline-items">
+                {education.map((edu, idx) => (
+                  <div key={idx} className="timeline-entry">
+                    <div className="timeline-marker">
+                      <div className="timeline-dot"></div>
+                      {idx !== education.length - 1 && <div className="timeline-line"></div>}
+                    </div>
+                    <div className="timeline-info">
+                      <div className="timeline-meta">
+                        <span className="timeline-role">{edu.role}</span>
+                        <span className="timeline-period">{edu.period}</span>
+                      </div>
+                      <span className="timeline-company">{edu.company}</span>
+                      <p className="timeline-desc">{edu.description}</p>
                     </div>
                   </div>
                 ))}

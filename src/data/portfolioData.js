@@ -1,21 +1,18 @@
 export const personalInfo = {
-  name: "Faysal Ahmed",
+  name: "MD. Faysal Ahmed",
   role: "Flutter Developer",
-  location: "Dhaka, Bangladesh / Remote Worldwide",
-  availability: "Available for freelance & full-time roles",
-  bioShort: "Passionate Flutter developer dedicated to building fast, beautiful, and fluid mobile and cross-platform applications.",
+  location: "295/4 Hazaribagh, TaliOffice road, Dhaka 1209",
+  availability: "Available for full-time & freelance roles",
+  bioShort: "Dedicated Flutter Developer focused on building reliable, clean, and maintainable cross-platform mobile apps for Android & iOS.",
   bioLong: [
-    "I'm a dedicated Flutter Developer with experience building cross-platform mobile apps for iOS and Android with Dart, clean architecture, and responsive UI.",
-    "My focus is on creating fluid animations, scalable state management (Getx, Provider, Riverpod), and seamless RESTful API and Firebase integrations."
+    "I have completed a BSc in Software Engineering and work as a passionate Flutter developer.",
+    "I build reliable mobile apps, write clean and maintainable code, and manage applications. I work with intention, stay aligned with best practices, and aim to add real value to any team I join."
   ],
-  email: "faysal.dev@example.com",
-  phone: "+880 1700-000000",
+  email: "faysaloniahmed@gmail.com",
+  phone: "+8801748051553",
   socials: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
-    dribbble: "https://dribbble.com",
-    discord: "https://discord.com"
+    github: "https://github.com/faysal-swe",
+    linkedin: "https://www.linkedin.com/in/faysal-ahmed-swe"
   },
   resumeUrl: "#"
 };
@@ -24,13 +21,13 @@ export const heroCodeSnippet = `// faysal_developer.dart
 import 'package:flutter/material.dart';
 
 class FaysalAhmed extends StatelessWidget {
-  final String name = 'Faysal Ahmed';
+  final String name = 'MD. Faysal Ahmed';
   final String role = 'Flutter Developer';
   final String status = 'Available for hire';
 
   final List<String> skills = const [
-    'Flutter', 'Dart', 'BLoC',
-    'Provider', 'Firebase', 'REST APIs'
+    'Flutter', 'Dart', 'Riverpod',
+    'GetX', 'Provider', 'Firebase', 'RESTful API'
   ];
 
   @override
@@ -45,63 +42,41 @@ class FaysalAhmed extends StatelessWidget {
 
 export const skillCategories = [
   {
-    category: "Flutter & Mobile Development",
+    category: "Framework & Mobile",
     icon: "Smartphone",
     skills: [
-      { name: "Flutter & Dart", level: 96 },
-      { name: "State Management (BLoC / Provider / Riverpod)", level: 94 },
-      { name: "REST APIs & JSON Integration", level: 92 },
-      { name: "Firebase (Auth, Firestore, Cloud Messaging)", level: 90 },
-      { name: "Clean Architecture & Design Patterns", level: 92 },
-      { name: "CI/CD & App Store / Play Store Release", level: 88 }
+      { name: "Flutter", level: 95 },
+      { name: "Android & iOS App Development", level: 92 },
+      { name: "Reusable UI Widgets", level: 95 },
+      { name: "Responsive Mobile UI", level: 90 }
     ]
   },
   {
-    category: "Frontend Development",
+    category: "Programming Languages",
     icon: "Layout",
     skills: [
-      { name: "React / Next.js", level: 92 },
-      { name: "JavaScript / TypeScript", level: 90 },
-      { name: "Modern CSS / CSS3 / Animations", level: 94 },
-      { name: "HTML5 / Semantic Web", level: 96 },
-      { name: "Redux / Zustand / React Query", level: 88 },
-      { name: "TailwindCSS & Styled Systems", level: 90 }
+      { name: "Dart", level: 95 },
+      { name: "Basic Java", level: 70 },
+      { name: "Basic C", level: 68 }
     ]
   },
   {
-    category: "Backend & Databases",
+    category: "State Management & Architecture",
     icon: "Server",
     skills: [
-      { name: "Node.js & Express", level: 88 },
-      { name: "PostgreSQL / Prisma", level: 85 },
-      { name: "MongoDB & Mongoose", level: 86 },
-      { name: "REST & GraphQL APIs", level: 92 },
-      { name: "Redis Caching", level: 80 },
-      { name: "Firebase & Supabase", level: 88 }
+      { name: "GetX", level: 92 },
+      { name: "Riverpod", level: 90 },
+      { name: "Provider", level: 90 },
+      { name: "RESTful API Integration", level: 92 }
     ]
   },
   {
-    category: "Mobile & DevOps",
-    icon: "Smartphone",
+    category: "Database & Version Control",
+    icon: "Palette",
     skills: [
-      { name: "Flutter / Android / iOS", level: 96 },
-      { name: "Docker & Containerization", level: 78 },
-      { name: "Git / GitHub Actions CI/CD", level: 90 },
-      { name: "Vercel / AWS / Cloudflare", level: 84 },
-      { name: "Performance Profiling & Optimization", level: 92 },
-      { name: "Unit & Widget Testing", level: 85 }
-    ]
-  },
-  {
-    category: "UI/UX & Product Design",
-    icon: "Figma",
-    skills: [
-      { name: "Figma UI/UX & Wireframing", level: 94 },
-      { name: "Design System Architecture", level: 90 },
-      { name: "Interactive Prototyping", level: 92 },
-      { name: "Design Handoff & Tokens", level: 95 },
-      { name: "Responsive & Mobile-First", level: 98 },
-      { name: "Motion & Micro-interactions", level: 88 }
+      { name: "Firebase (Auth, Firestore, Cloud Messaging)", level: 90 },
+      { name: "Basic SQL", level: 75 },
+      { name: "GitHub / Git Version Control", level: 92 }
     ]
   }
 ];
@@ -109,145 +84,143 @@ export const skillCategories = [
 export const featuredProjects = [
   {
     id: 1,
-    title: "Nova E-Commerce App",
-    category: "Mobile & Full-Stack",
-    description: "A luxury mobile e-commerce platform built with React Native and Node.js featuring real-time inventory synchronization, dynamic dark UI, and seamless Stripe checkout integration.",
-    tags: ["React Native", "TypeScript", "Node.js", "Stripe", "Figma", "Redux Toolkit"],
+    title: "Motive Entertainment",
+    category: "Mobile Application",
+    description: "Connects users with local food and drink specials through an easy-to-use mobile app. Provides real-time venue updates and personalized search to help users find the best dining deals while helping venues attract more customers.",
+    tags: ["Flutter", "Dart", "Firebase", "RESTful API", "Google Play"],
     previewType: "mobile",
-    image: "https://images.unsplash.com/photo-1556742049-0a67c57750c9?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop",
     mockupColor: "#8b5cf6",
     features: [
-      "Custom audio hardware & lifestyle catalog",
-      "Instant 1-tap Apple Pay & Stripe checkout",
-      "Real-time order tracker with push updates"
+      "Connects users with local food and drink specials seamlessly",
+      "Real-time venue updates and personalized search for top dining deals",
+      "Benefits diners with affordable deals and venues with customer engagement"
     ],
-    liveUrl: "https://example.com/nova",
-    githubUrl: "https://github.com/example/nova-app"
+    liveUrl: "https://play.google.com/store/apps/details?id=com.oscaru.motive",
+    githubUrl: "https://github.com/faysal-swe"
   },
   {
     id: 2,
-    title: "Pulse Health & Fitness Tracker",
-    category: "Mobile & Web",
-    description: "Comprehensive biometric dashboard and mobile tracker visualizing heart rate variability, training loads, recovery sleep metrics, and automated AI workout suggestions.",
-    tags: ["React", "Chart.js", "TailwindCSS", "Node.js", "PostgreSQL", "HealthKit"],
+    title: "Lola Football",
+    category: "Live Streaming & Sports App",
+    description: "Built a live football streaming mobile application that lets users watch matches in real time. Designed sections for league-specific matches, top players, and season winners, with detailed match result lists and reliable performance.",
+    tags: ["Flutter", "Dart", "Live Streaming", "RESTful API", "Google Play"],
     previewType: "mobile",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=800&auto=format&fit=crop",
     mockupColor: "#06b6d4",
     features: [
-      "Dynamic activity & sleep stage charts",
-      "Real-time heart rate zones & recovery score",
-      "Personalized daily target recommendations"
+      "Live football streaming for watching matches in real time",
+      "Dedicated sections for league-specific matches, top players & season winners",
+      "Match result pages with live, upcoming, and recent match lists with detailed stats"
     ],
-    liveUrl: "https://example.com/pulse",
-    githubUrl: "https://github.com/example/pulse-health"
+    liveUrl: "https://play.google.com/store/apps/details?id=com.lolafootball.app",
+    githubUrl: "https://github.com/faysal-swe"
   },
   {
     id: 3,
-    title: "Apex Analytics SaaS Dashboard",
-    category: "Web Application",
-    description: "High-throughput analytics platform processing millions of data points per second with customizable widgets, funnels, cohort analysis, and dark glass aesthetics.",
-    tags: ["Next.js", "TypeScript", "GraphQL", "Redis", "TailwindCSS", "Docker"],
-    previewType: "dashboard",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
-    mockupColor: "#6366f1",
+    title: "Yoga with Jen",
+    category: "Health & Fitness Training App",
+    description: "Developed a yoga training application with video-based learning modules. Added features for users to rate and comment on training videos, alongside an interactive community section where users can post, like, and comment with smooth navigation.",
+    tags: ["Flutter", "Dart", "Video Modules", "Community Feed", "Google Play"],
+    previewType: "mobile",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop",
+    mockupColor: "#10b981",
     features: [
-      "Ultra-low latency real-time data streaming",
-      "Interactive cohort & conversion funnels",
-      "Multi-tenant team management & role-based ACL"
+      "Video-based structured yoga training learning modules",
+      "Interactive ratings and user comments on training sessions",
+      "Engaging community section allowing users to post, like, and interact"
     ],
-    liveUrl: "https://example.com/apex",
-    githubUrl: "https://github.com/example/apex-analytics"
-  },
-  {
-    id: 4,
-    title: "Quantum AI Studio",
-    category: "AI & Web Application",
-    description: "Interactive generative AI playground featuring live code sandbox execution, dynamic prompt engineering templates, multi-model LLM comparisons, and streaming voice synthesis.",
-    tags: ["React 19", "Vite", "OpenAI API", "WebSockets", "PrismJS", "CSS Modules"],
-    previewType: "dashboard",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
-    mockupColor: "#ec4899",
-    features: [
-      "Multi-modal prompt experimentation studio",
-      "Real-time streamed code sandbox preview",
-      "Automated evaluation matrix and cost calculator"
-    ],
-    liveUrl: "https://example.com/quantum",
-    githubUrl: "https://github.com/example/quantum-ai"
+    liveUrl: "https://play.google.com/store/apps/details?id=com.yoga.users&hl=en",
+    githubUrl: "https://github.com/faysal-swe"
   }
 ];
 
 export const services = [
   {
-    icon: "Code2",
-    title: "Full-Stack Development",
-    description: "End-to-end web applications crafted with modern architectures like React, Next.js, Node.js, and scalable SQL/NoSQL databases.",
-    perks: ["Clean Architecture", "Fast API Endpoints", "Maintainable Codebases"]
-  },
-  {
-    icon: "Palette",
-    title: "UI/UX & Product Design",
-    description: "User-centered design from research and wireframing to pixel-perfect design systems, high-fidelity Figma prototypes, and micro-interactions.",
-    perks: ["Figma Design Systems", "Interactive Prototypes", "Accessible & Modern"]
-  },
-  {
     icon: "Smartphone",
-    title: "Mobile App Development",
-    description: "Cross-platform mobile applications using React Native with native performance, offline support, and smooth gestures.",
-    perks: ["iOS & Android Support", "Smooth 60fps Animations", "Offline First"]
-  },
-  {
-    icon: "Zap",
-    title: "Performance & SEO",
-    description: "Auditing and optimizing web applications for lightning-fast load times, 95+ Core Web Vitals scores, and superior search rankings.",
-    perks: ["Lighthouse Optimization", "Core Web Vitals", "SSR / Edge Caching"]
-  },
-  {
-    icon: "ShieldCheck",
-    title: "API & Backend Systems",
-    description: "Robust REST and GraphQL backend services with bulletproof authentication, security validations, and real-time WebSocket sync.",
-    perks: ["Scalable DB Schema", "Secure Auth Flow", "Webhook Integrations"]
+    title: "Flutter Mobile App Development",
+    description: "High-performance cross-platform applications for Android and iOS using Flutter and Dart, built with scalable clean architecture.",
+    perks: ["Android & iOS Support", "Smooth 60 FPS Performance", "Clean Maintainable Code"]
   },
   {
     icon: "Layers",
-    title: "Design System Engineering",
-    description: "Building resilient reusable component libraries and CSS token architectures for fast developer velocity and visual consistency.",
-    perks: ["Atomic Design Tokens", "Theme Switching Support", "Comprehensive Docs"]
+    title: "Reusable & Responsive UI Design",
+    description: "Developing reusable, accessible, and responsive UI components using Flutter widgets that look stunning across all screen sizes.",
+    perks: ["Pixel-Perfect Widgets", "Responsive Layouts", "Fluid Transitions"]
+  },
+  {
+    icon: "Zap",
+    title: "State Management Architecture",
+    description: "Implementing robust and predictable state management solutions utilizing Riverpod, GetX, or Provider according to project needs.",
+    perks: ["Riverpod / GetX / Provider", "Decoupled Logic", "Easy Maintainability"]
+  },
+  {
+    icon: "Server",
+    title: "RESTful API & Backend Integration",
+    description: "Seamlessly connecting mobile apps to backend services through RESTful APIs, JSON serialization, and real-time networking.",
+    perks: ["RESTful Endpoints", "Robust Error Handling", "Offline Data Sync"]
+  },
+  {
+    icon: "ShieldCheck",
+    title: "Firebase & Cloud Services",
+    description: "Full Firebase backend integration including Authentication, Firestore database, Cloud Messaging push notifications, and analytics.",
+    perks: ["Firebase Auth & Firestore", "Push Notifications", "Cloud Storage"]
+  },
+  {
+    icon: "Code2",
+    title: "App Release & Maintenance",
+    description: "Preparing, testing, and deploying mobile apps to Google Play Store, managing versioning, bug fixes, and continuous improvements.",
+    perks: ["Google Play Store Release", "Performance Profiling", "Issue Resolution"]
   }
 ];
 
 export const experiences = [
   {
-    period: "2023 — Present",
-    role: "Senior Full-Stack Engineer",
-    company: "TechNova Solutions",
-    description: "Lead frontend and full-stack architecture for enterprise SaaS clients, improving application performance by 40%."
+    period: "July 2025 – Dec 2025",
+    role: "Junior Flutter Developer",
+    company: "Root Devs",
+    description: "Built mobile applications for Android and iOS using Flutter. Developed reusable and responsive UI components using Flutter widgets. Worked closely with designers, backend developers, and project managers to implement app features and fix issues."
   },
   {
-    period: "2021 — 2023",
-    role: "Full-Stack Developer & UI Designer",
-    company: "CyberCraft Studio",
-    description: "Engineered scalable web applications and built cross-platform mobile apps for fast-growing global startups."
+    period: "Oct 2024 – Jun 2025",
+    role: "Junior Flutter Developer",
+    company: "Spark Tech",
+    description: "Built applications for mobile platforms using Flutter. Developed reusable and responsive UI components using Flutter widgets. Worked closely with designers, backend developers, and project managers to implement app features and fix issues."
+  }
+];
+
+export const education = [
+  {
+    period: "2019 – 2023",
+    role: "B.Sc. in Software Engineering",
+    company: "Daffodil International University",
+    description: "Graduated with CGPA 3.40 / 4.00, focusing on software engineering principles, algorithms, mobile computing, and clean software architecture."
   },
   {
-    period: "2019 — 2021",
-    role: "Frontend Developer",
-    company: "PixelForge Digital",
-    description: "Crafted interactive, responsive web applications, design systems, and component libraries."
+    period: "2019",
+    role: "HSC (Science)",
+    company: "Mohammadpur Kendriya College",
+    description: "Completed Higher Secondary Certificate in Science division with GPA 3.30 / 5.00."
+  },
+  {
+    period: "2017",
+    role: "SSC (Science)",
+    company: "Rayer Bazar High School",
+    description: "Completed Secondary School Certificate in Science division with GPA 4.55 / 5.00."
   }
 ];
 
 export const testimonials = [
   {
-    quote: "Faysal delivered an exceptional web application ahead of schedule. His attention to design aesthetics and clean code made the entire collaboration a dream.",
-    author: "Sarah Jenkins",
-    role: "CTO, CloudScale Inc.",
+    quote: "Faysal is an exceptional Flutter developer. His ability to craft responsive, fluid mobile interfaces and cleanly integrate APIs made our product launch a huge success.",
+    author: "Root Devs Team",
+    role: "Project Manager",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop"
   },
   {
-    quote: "One of the most talented full-stack developers we've worked with. The UX was silky smooth and the codebase was modular, clean, and easily maintainable.",
-    author: "David Chen",
-    role: "Founder, Apex AI",
+    quote: "Working with Faysal was a breeze. He writes clean, maintainable Dart code, communicates effectively, and reliably delivers production-ready Flutter apps.",
+    author: "Spark Tech Lead",
+    role: "Senior Engineering Lead",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
   }
 ];

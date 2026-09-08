@@ -9,15 +9,13 @@ export default function Projects() {
   const [filter, setFilter] = useState('all');
 
   const filterCategories = [
-    { label: 'All Projects', value: 'all' },
-    { label: 'Mobile Apps', value: 'mobile' },
-    { label: 'Web Applications', value: 'web' }
+    { label: 'All Flutter Projects', value: 'all' },
+    { label: 'Google Play Apps', value: 'play' }
   ];
 
   const filteredProjects = featuredProjects.filter((project) => {
     if (filter === 'all') return true;
-    if (filter === 'mobile') return project.previewType === 'mobile';
-    if (filter === 'web') return project.previewType === 'dashboard';
+    if (filter === 'play') return project.tags.includes('Google Play');
     return true;
   });
 
@@ -27,7 +25,7 @@ export default function Projects() {
         <SectionHeading
           badge="Featured Projects"
           title="Crafted With Precision & Purpose"
-          subtitle="Explore some of my high-impact mobile apps, analytics platforms, and digital products."
+          subtitle="Explore my published Flutter mobile applications built for performance, fluid UX, and scalability."
         />
 
         {/* Filter Tabs */}
@@ -93,7 +91,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="btn btn-primary project-btn"
                     >
-                      <span>Live Preview</span>
+                      <span>Google Play</span>
                       <ArrowUpRight size={16} />
                     </a>
 
@@ -104,7 +102,7 @@ export default function Projects() {
                       className="btn btn-secondary project-btn"
                     >
                       <GithubIcon size={16} />
-                      <span>Source Code</span>
+                      <span>GitHub</span>
                     </a>
                   </div>
                 </div>
@@ -116,124 +114,114 @@ export default function Projects() {
                     style={{ background: `radial-gradient(circle, ${project.mockupColor}33 0%, transparent 70%)` }}
                   ></div>
 
-                  {project.previewType === 'mobile' ? (
-                    /* High-fidelity Phone Mockup Frame */
-                    <div className="phone-mockup-frame">
-                      <div className="phone-speaker-notch">
-                        <div className="camera-lens"></div>
-                      </div>
-
-                      <div className="phone-screen-content">
-                        {/* Dynamic Mockup UI based on project */}
-                        {project.id === 1 ? (
-                          <div className="ecommerce-mockup-ui">
-                            <div className="mockup-header-bar">
-                              <span className="mockup-brand">NOVA STORE</span>
-                              <ShoppingBag size={16} className="mockup-icon" />
-                            </div>
-                            <div className="mockup-hero-banner">
-                              <span className="banner-sub">Premium Acoustics</span>
-                              <h4 className="banner-h">Studio Pro ANC</h4>
-                            </div>
-                            <div className="mockup-product-grid">
-                              <div className="product-card-mini">
-                                <div className="product-thumb headphones">🎧</div>
-                                <span className="p-title">ANC Headset</span>
-                                <span className="p-price">$299</span>
-                              </div>
-                              <div className="product-card-mini">
-                                <div className="product-thumb watch">⌚</div>
-                                <span className="p-title">Aura Watch 2</span>
-                                <span className="p-price">$349</span>
-                              </div>
-                              <div className="product-card-mini">
-                                <div className="product-thumb shoes">👟</div>
-                                <span className="p-title">Cloud Stride</span>
-                                <span className="p-price">$180</span>
-                              </div>
-                              <div className="product-card-mini">
-                                <div className="product-thumb speaker">🔊</div>
-                                <span className="p-title">Bass Orb 3</span>
-                                <span className="p-price">$120</span>
-                              </div>
-                            </div>
-                          </div>
-                        ) : (
-                          <div className="fitness-mockup-ui">
-                            <div className="mockup-header-bar">
-                              <span className="mockup-brand">PULSE HEALTH</span>
-                              <Activity size={16} className="mockup-icon active-green" />
-                            </div>
-                            <div className="fitness-score-card">
-                              <span className="score-label">Recovery Score</span>
-                              <div className="score-number">94<span className="score-unit">%</span></div>
-                              <span className="score-status">Optimal for training</span>
-                            </div>
-                            <div className="fitness-metrics-bars">
-                              <div className="mini-stat-card">
-                                <span className="ms-label">Heart Rate</span>
-                                <span className="ms-val">62 bpm</span>
-                              </div>
-                              <div className="mini-stat-card">
-                                <span className="ms-label">Sleep Target</span>
-                                <span className="ms-val">8h 24m</span>
-                              </div>
-                            </div>
-                            <div className="fitness-chart-mock">
-                              <div className="chart-bar" style={{ height: '40%' }}></div>
-                              <div className="chart-bar" style={{ height: '65%' }}></div>
-                              <div className="chart-bar" style={{ height: '85%' }}></div>
-                              <div className="chart-bar" style={{ height: '70%' }}></div>
-                              <div className="chart-bar" style={{ height: '95%' }}></div>
-                              <div className="chart-bar" style={{ height: '60%' }}></div>
-                              <div className="chart-bar" style={{ height: '80%' }}></div>
-                            </div>
-                          </div>
-                        )}
-                      </div>
+                  {/* High-fidelity Phone Mockup Frame */}
+                  <div className="phone-mockup-frame">
+                    <div className="phone-speaker-notch">
+                      <div className="camera-lens"></div>
                     </div>
-                  ) : (
-                    /* High-fidelity Dashboard Mockup Frame */
-                    <div className="dashboard-mockup-frame">
-                      <div className="dashboard-mockup-top">
-                        <div className="window-dots">
-                          <span className="dot dot-red"></span>
-                          <span className="dot dot-yellow"></span>
-                          <span className="dot dot-green"></span>
-                        </div>
-                        <span className="dash-title-mock">app.analytics.io/overview</span>
-                      </div>
-                      <div className="dashboard-mockup-body">
-                        <div className="dash-stats-row">
-                          <div className="dash-metric-box">
-                            <span className="dm-lbl">Active Users</span>
-                            <span className="dm-num">128.4k</span>
-                            <span className="dm-grow">+18.2%</span>
-                          </div>
-                          <div className="dash-metric-box">
-                            <span className="dm-lbl">Conversion</span>
-                            <span className="dm-num">4.82%</span>
-                            <span className="dm-grow">+4.1%</span>
-                          </div>
-                          <div className="dash-metric-box">
-                            <span className="dm-lbl">MRR</span>
-                            <span className="dm-num">$84.2k</span>
-                            <span className="dm-grow">+24%</span>
-                          </div>
-                        </div>
 
-                        <div className="dash-chart-mockup">
-                          <div className="dash-chart-header">
-                            <span>Traffic & Conversions</span>
-                            <span className="live-pill">LIVE</span>
+                    <div className="phone-screen-content">
+                      {project.id === 1 ? (
+                        /* Motive Entertainment UI */
+                        <div className="ecommerce-mockup-ui">
+                          <div className="mockup-header-bar">
+                            <span className="mockup-brand">MOTIVE APP</span>
+                            <ShoppingBag size={16} className="mockup-icon" />
                           </div>
-                          <div className="dash-wave-chart">
-                            <div className="wave-line"></div>
+                          <div className="mockup-hero-banner">
+                            <span className="banner-sub">Exclusive Specials</span>
+                            <h4 className="banner-h">Top Dining Deals</h4>
+                          </div>
+                          <div className="mockup-product-grid">
+                            <div className="product-card-mini">
+                              <div className="product-thumb headphones">🍹</div>
+                              <span className="p-title">Happy Hour</span>
+                              <span className="p-price">50% Off</span>
+                            </div>
+                            <div className="product-card-mini">
+                              <div className="product-thumb watch">🍕</div>
+                              <span className="p-title">Artisan Pizza</span>
+                              <span className="p-price">Save $12</span>
+                            </div>
+                            <div className="product-card-mini">
+                              <div className="product-thumb shoes">🍔</div>
+                              <span className="p-title">Craft Burgers</span>
+                              <span className="p-price">Special</span>
+                            </div>
+                            <div className="product-card-mini">
+                              <div className="product-thumb speaker">☕</div>
+                              <span className="p-title">Café Brunch</span>
+                              <span className="p-price">2 for 1</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      ) : project.id === 2 ? (
+                        /* Lola Football UI */
+                        <div className="fitness-mockup-ui">
+                          <div className="mockup-header-bar">
+                            <span className="mockup-brand">LOLA FOOTBALL</span>
+                            <Activity size={16} className="mockup-icon active-green" />
+                          </div>
+                          <div className="fitness-score-card">
+                            <span className="score-label">Live Match • 78'</span>
+                            <div className="score-number">2 - 1</div>
+                            <span className="score-status">Real-time Stream Active</span>
+                          </div>
+                          <div className="fitness-metrics-bars">
+                            <div className="mini-stat-card">
+                              <span className="ms-label">Possession</span>
+                              <span className="ms-val">58% - 42%</span>
+                            </div>
+                            <div className="mini-stat-card">
+                              <span className="ms-label">Top Scorers</span>
+                              <span className="ms-val">14 Goals</span>
+                            </div>
+                          </div>
+                          <div className="fitness-chart-mock">
+                            <div className="chart-bar" style={{ height: '55%' }}></div>
+                            <div className="chart-bar" style={{ height: '75%' }}></div>
+                            <div className="chart-bar" style={{ height: '90%' }}></div>
+                            <div className="chart-bar" style={{ height: '65%' }}></div>
+                            <div className="chart-bar" style={{ height: '100%' }}></div>
+                            <div className="chart-bar" style={{ height: '70%' }}></div>
+                            <div className="chart-bar" style={{ height: '85%' }}></div>
+                          </div>
+                        </div>
+                      ) : (
+                        /* Yoga with Jen UI */
+                        <div className="fitness-mockup-ui">
+                          <div className="mockup-header-bar">
+                            <span className="mockup-brand">YOGA WITH JEN</span>
+                            <Sparkles size={16} className="mockup-icon active-green" />
+                          </div>
+                          <div className="fitness-score-card" style={{ borderColor: 'rgba(16, 185, 129, 0.4)' }}>
+                            <span className="score-label">Video Module • 25 Mins</span>
+                            <div className="score-number" style={{ fontSize: '1.4rem', marginTop: '0.2rem' }}>Vinyasa Flow</div>
+                            <span className="score-status" style={{ color: '#10b981' }}>★ 4.9 (128 Reviews)</span>
+                          </div>
+                          <div className="fitness-metrics-bars">
+                            <div className="mini-stat-card">
+                              <span className="ms-label">Community</span>
+                              <span className="ms-val">340+ Posts</span>
+                            </div>
+                            <div className="mini-stat-card">
+                              <span className="ms-label">Difficulty</span>
+                              <span className="ms-val">All Levels</span>
+                            </div>
+                          </div>
+                          <div className="fitness-chart-mock">
+                            <div className="chart-bar" style={{ height: '35%', background: '#10b981' }}></div>
+                            <div className="chart-bar" style={{ height: '60%', background: '#10b981' }}></div>
+                            <div className="chart-bar" style={{ height: '85%', background: '#10b981' }}></div>
+                            <div className="chart-bar" style={{ height: '95%', background: '#10b981' }}></div>
+                            <div className="chart-bar" style={{ height: '75%', background: '#10b981' }}></div>
+                            <div className="chart-bar" style={{ height: '85%', background: '#10b981' }}></div>
+                            <div className="chart-bar" style={{ height: '90%', background: '#10b981' }}></div>
+                          </div>
+                        </div>
+                      )}
                     </div>
-                  )}
+                  </div>
                 </div>
               </div>
             );

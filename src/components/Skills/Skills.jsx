@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { skillCategories } from '../../data/portfolioData';
 import SectionHeading from '../UI/SectionHeading';
-import { Layout, Server, Smartphone, Palette, Check, Zap } from 'lucide-react';
+import { Layout, Server, Smartphone, Palette, Check, Zap, Code2, Database } from 'lucide-react';
 import './Skills.css';
 
 export default function Skills() {
@@ -9,26 +9,25 @@ export default function Skills() {
 
   const getCategoryIcon = (iconName) => {
     switch (iconName) {
-      case 'Layout': return <Layout size={22} />;
-      case 'Server': return <Server size={22} />;
+      case 'Layout': return <Code2 size={22} />;
+      case 'Server': return <Zap size={22} />;
       case 'Smartphone': return <Smartphone size={22} />;
-      case 'Figma':
-      case 'Palette': return <Palette size={22} />;
+      case 'Palette': return <Database size={22} />;
       default: return <Zap size={22} />;
     }
   };
 
   const filteredCategories = activeTab === 'all'
     ? skillCategories
-    : skillCategories.filter((cat) => cat.category.toLowerCase().includes(activeTab.toLowerCase()));
+    : skillCategories.filter((cat) => cat.category === activeTab);
 
   return (
     <section id="skills" className="section skills-section">
       <div className="container">
         <SectionHeading
-          badge="Skills & Technologies"
-          title="Engineered With Modern Tooling & Clean Code"
-          subtitle="A comprehensive toolkit across full-stack engineering, interface design, and cloud infrastructures."
+          badge="Technical Skills"
+          title="Engineered With Modern Flutter Tooling"
+          subtitle="Specialized in Flutter cross-platform mobile engineering, Dart, clean state management, and Firebase."
           align="center"
         />
 
@@ -38,38 +37,17 @@ export default function Skills() {
             className={`skill-tab-btn ${activeTab === 'all' ? 'active' : ''}`}
             onClick={() => setActiveTab('all')}
           >
-            All Disciplines
+            All Skills
           </button>
-          <button
-            className={`skill-tab-btn ${activeTab === 'flutter' ? 'active' : ''}`}
-            onClick={() => setActiveTab('flutter')}
-          >
-            Flutter
-          </button>
-          <button
-            className={`skill-tab-btn ${activeTab === 'frontend' ? 'active' : ''}`}
-            onClick={() => setActiveTab('frontend')}
-          >
-            Frontend
-          </button>
-          <button
-            className={`skill-tab-btn ${activeTab === 'backend' ? 'active' : ''}`}
-            onClick={() => setActiveTab('backend')}
-          >
-            Backend
-          </button>
-          <button
-            className={`skill-tab-btn ${activeTab === 'mobile' ? 'active' : ''}`}
-            onClick={() => setActiveTab('mobile')}
-          >
-            Mobile & DevOps
-          </button>
-          <button
-            className={`skill-tab-btn ${activeTab === 'design' ? 'active' : ''}`}
-            onClick={() => setActiveTab('design')}
-          >
-            UI/UX Design
-          </button>
+          {skillCategories.map((cat, idx) => (
+            <button
+              key={idx}
+              className={`skill-tab-btn ${activeTab === cat.category ? 'active' : ''}`}
+              onClick={() => setActiveTab(cat.category)}
+            >
+              {cat.category}
+            </button>
+          ))}
         </div>
 
         {/* Skills Cards Grid */}

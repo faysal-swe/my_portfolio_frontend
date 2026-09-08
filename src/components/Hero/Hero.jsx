@@ -35,7 +35,7 @@ export default function Hero() {
           </div>
 
           <h1 className="hero-title">
-            <span className="hero-name-first">Faysal</span>
+            <span className="hero-name-first">MD. Faysal</span>
             <span className="hero-name-last">Ahmed<span className="period-dot">.</span></span>
           </h1>
 
