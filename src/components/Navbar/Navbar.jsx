@@ -44,6 +44,18 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is active
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   const handleLinkClick = (e, href) => {
     e.preventDefault();
     setMobileMenuOpen(false);
@@ -100,6 +112,7 @@ export default function Navbar() {
             className="mobile-toggle-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -110,17 +123,22 @@ export default function Navbar() {
       <div className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-drawer-content">
           <ul className="mobile-nav-list">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <a
-                  href={link.href}
-                  className="mobile-nav-link"
-                  onClick={(e) => handleLinkClick(e, link.href)}
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const id = link.href.substring(1);
+              const isActive = activeSection === id;
+              return (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className={`mobile-nav-link ${isActive ? 'active' : ''}`}
+                    onClick={(e) => handleLinkClick(e, link.href)}
+                  >
+                    <span>{link.name}</span>
+                    {isActive && <span className="mobile-active-indicator" />}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
           <div className="mobile-drawer-footer">
             <a

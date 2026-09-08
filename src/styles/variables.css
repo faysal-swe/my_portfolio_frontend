@@ -62,7 +62,8 @@
   --radius-xl: 28px;
   --radius-full: 9999px;
 
-  /* Max Widths */
+  /* Max Widths & Header Heights */
   --max-width: 1200px;
   --header-height: 80px;
+  --header-height-mobile: 68px;
 }
