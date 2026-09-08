@@ -18,7 +18,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
+  width: min(500px, 90vw);
   height: 300px;
   background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, rgba(6, 182, 212, 0.15) 50%, transparent 70%);
   filter: blur(80px);
@@ -48,19 +48,22 @@
   padding: 0.35rem 0.9rem;
   border-radius: var(--radius-full);
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .cta-sparkle {
   color: var(--accent-cyan);
+  flex-shrink: 0;
 }
 
 .cta-title {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-size: clamp(1.75rem, 5.5vw, 3.2rem);
   font-weight: 800;
   color: var(--text-main);
-  line-height: 1.15;
+  line-height: 1.18;
   margin-bottom: 1.25rem;
   letter-spacing: -0.03em;
+  word-break: break-word;
 }
 
 .cta-highlight {
@@ -70,7 +73,7 @@
 }
 
 .cta-description {
-  font-size: 1.05rem;
+  font-size: clamp(0.92rem, 2vw, 1.05rem);
   color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 2.5rem;
@@ -89,7 +92,38 @@
 }
 
 @media (max-width: 640px) {
+  .cta-section {
+    padding: 2.5rem 0;
+  }
+
   .cta-banner-card {
-    padding: 3rem 1.5rem;
+    padding: 2.75rem 1.5rem;
+  }
+
+  .cta-description {
+    margin-bottom: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-banner-card {
+    padding: 2.25rem 1.1rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .cta-badge {
+    font-size: 0.75rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
   }
 }

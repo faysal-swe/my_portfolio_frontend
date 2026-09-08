@@ -131,7 +131,52 @@
 }
 
 @media (max-width: 860px) {
+  .skills-tabs-container {
+    margin-bottom: 2.25rem;
+    gap: 0.5rem;
+  }
+
   .skills-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .skill-category-card {
+    padding: 1.6rem 1.25rem;
+  }
+
+  .category-card-header {
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .category-name {
+    font-size: 1.15rem;
+  }
+
+  .category-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-tab-btn {
+    padding: 0.45rem 0.95rem;
+    font-size: 0.8rem;
+  }
+
+  .skill-category-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .skills-progress-list {
+    gap: 1rem;
+  }
+
+  .skill-title {
+    font-size: 0.85rem;
   }
 }

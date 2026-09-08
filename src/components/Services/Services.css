@@ -84,11 +84,41 @@
 @media (max-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 640px) {
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .service-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .service-icon-box {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-card-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    padding: 1.35rem 1rem;
+  }
+
+  .service-card-desc {
+    font-size: 0.86rem;
+  }
+
+  .service-perk-item {
+    font-size: 0.8rem;
   }
 }
